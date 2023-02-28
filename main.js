@@ -10,9 +10,9 @@ filterContainer.addEventListener("click", (event) =>{
     
     if (event.target.classList.contains("baller")) {
         console.log(true);
-      // deactivate existing active ‘filter-item’
+      // deactivate existing active "filter-item"
         filterContainer.querySelector(".active").classList.remove('active');
-      // activate new ‘filter-item’
+      // activate new "filter-item"
         event.target.classList.add("active");
         const filterValue = event.target.getAttribute('data-filter');
 
@@ -30,4 +30,23 @@ filterContainer.addEventListener("click", (event) =>{
          });
     }
 });
+
+$(document).ready(function(){
+  //jquery for toggle sub menus
+  $(".sub-btn").click(function(){
+    $(this).next(".sub-menu").slideToggle();
+    $(this).find(".dropdown").toggleClass("rotate");
+  });
+  //jquery for expand and collapse the sidebar
+  $(".menu-btn").click(function(){
+    $(".side-bar").addClass("active");
+    $(".menu-btn").css("visibility", "hidden");
+  });
+  //Active cancel button
+  $(".close-btn").click(function(){
+    $(".side-bar").removeClass("active");
+    $(".menu-btn").css("visibility", "visible");
+  });
+});
   
+
