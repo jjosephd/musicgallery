@@ -1,8 +1,14 @@
 const filterContainer = document.querySelector('.gallery-filter');
 const galleryItems = document.querySelectorAll(".gallery-item");
+const shareButton = document.querySelectorAll('.share-btn');
+const activeBar = document.querySelector('.social-container');
+const sideBar = document.querySelector('.side-bar');
+const main = document.querySelector('main');
 
-console.log(galleryItems);
-console.log(filterContainer);
+console.log(activeBar);
+console.log(main);
+
+
 
 
  
@@ -35,12 +41,15 @@ $(document).ready(function(){
   //jquery for toggle sub menus
   $(".sub-btn").click(function(){
     $(this).next(".sub-menu").slideToggle();
-    $(this).find(".dropdown").toggleClass("rotate");
+    $(this).find(".dropdown").toggleClass("rotate"); 
   });
+
   //jquery for expand and collapse the sidebar
   $(".menu-btn").click(function(){
     $(".side-bar").addClass("active");
     $(".menu-btn").css("visibility", "hidden");
+    document.getElementById('popup').style.display = 'none';
+
   });
   //Active cancel button
   $(".close-btn").click(function(){
@@ -48,5 +57,12 @@ $(document).ready(function(){
     $(".menu-btn").css("visibility", "visible");
   });
 });
-  
+function openPopup() {
+  document.getElementById('popup').style.display = 'flex';
+  $(".side-bar").removeClass("active");
+  $(".menu-btn").css("visibility", "visible");
+};
 
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+};

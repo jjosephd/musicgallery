@@ -5,10 +5,11 @@ body{
 *{
 	margin:0;
 	box-sizing: border-box;
+
 }
 
-h1{
-
+#bootstrap-overrides h1{
+color: white;
   margin: auto;
   display: grid;
   justify-content: center;
@@ -18,26 +19,65 @@ h1{
 .menu-btn{
   background-color: #303231;
   position: absolute;
-  color: #efa30b;
+  color: #ef50a5;
   font-size: 35px;
   margin: 25px;
   cursor: pointer;
 }
+
+.popup-container{
+  width: 400px;
+  height: 30vh;
+  color: rgb(37, 84, 141);
+  background-color: #b8bec2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  box-shadow: 5px 5px 10px 700px rgba(46, 45, 45, 0.8);
+  
+}
+
+
+.popup-container .sm-icon{
+  padding: none;
+  border: none;
+  background-color: inherit;
+
+}
+
+.popup-container .sm-icon:hover{
+  color: #f8f8f8;
+  margin-bottom: 10px;
+  transition: 0.2s ease-in;
+}
+
+.popup-container a{
+  color: inherit;
+}
+
 
 .close-btn{
   color: white;
   cursor: pointer;
 }
 .close-btn:hover{
-  color: #efa30b;
+  color: #ef0b85;
 }
 .play-btn{
   color: white;
-  margin-left: 50%;
-  cursor: pointer;
+  margin-left: 45%;
 }
 
-
+.side-bar h1{
+  color: white;
+}
 .side-bar {
   z-index: 2;
   background-color: #1b1a1b;
@@ -71,6 +111,7 @@ h1{
   padding-bottom: 13px;
   font-family: sans-serif;
   letter-spacing: 2px;
+  color: #d4dad9;
 }
 
 .menu{
@@ -118,6 +159,22 @@ h1{
  .side-bar .menu .menu-item .sub-menu a{
   padding-left: 80px;
  }
+
+ .share-btn{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    padding-left: 80px;
+ }
+
+ .share-btn:hover{
+  background: #3c3e3f;
+  transition: 0.3s ease;
+ }
+
  .rotate{
   transform: rotate(90deg);
  }
@@ -131,6 +188,9 @@ h1{
 	display: flex;
 	flex-wrap: wrap;
     
+}
+.row3{
+  justify-content: center;
 }
 img{
 	max-width: 100%;
@@ -164,25 +224,21 @@ img{
    transition: all 0.3s ease;
  }
 
- .gallery .gallery-filter .filter-item:hover{
-    background-color:#16b5ef;
-    transition: all 0.8s ease;
-    border-color: rgb(5, 242, 242);
- }
+
  .container{
      max-width: 1170px;
      margin:auto;
  }
 
- .gallery .gallery-item{
-    height: auto;
-	width: calc(100% / 3);
-	padding: 15px;
-}
+ .gallery .gallery-item {
+   height: auto;
+   width: calc(100% / 3);
+   padding: 15px;
+ }
 .gallery .gallery-item img{
     
     width: 100%;
-    
+    height: auto;
     border: 3px solid #d4dad9;
     border-radius: 8%;
 }
@@ -208,6 +264,8 @@ img{
 .gallery .gallery-item.show{
 	animation: fadeIn 0.5s ease;
 }
+
+
 @keyframes fadeIn{
 	0%{
 		opacity: 0;
@@ -223,6 +281,25 @@ img{
 .gallery .gallery-item.show{
 	animation: fadeIn 0.5s ease;
 }
+.share-social{
+  margin-top: 25%;
+  background-color: #d4dad9;
+  color: #0c465b;
+
+  
+}
+
+
+.gallery .sm-btn{
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.gallery .share-social h5{
+  
+ 
+}
+
 @keyframes fadeIn{
 	0%{
 		opacity: 0;
@@ -248,4 +325,47 @@ img{
 	.gallery .gallery-filter .filter-item{
 		margin-bottom: 10px;
 	}
+}
+
+.container-upload{
+  display: grid;
+  margin: 146px 30% 0px 30%;
+
+  
+}
+.container-upload label{
+  display: grid;
+  padding-top: 10px;
+}
+.container-upload select{
+  padding-bottom: 0.5rem;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+#description{
+  padding-bottom: 1rem;
+}
+#comments{
+padding-bottom: 3rem;
+}
+#fav-song{
+padding-bottom: 3rem;
+}
+
+.submit-btn{
+  margin-right: 1rem;
+  
+}
+.container-upload form .row{
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="container-upload">
+        <form action="#">
+            <h5 class="text-center">Upload a Review</h5>
+            <label for="name">Name</label>
+            <input type="text" name="name" class="btn-block" id="" placeholder="">
+    
+            <label for="genre">Genre</label>
+            <select name="genre-select" class="btn-block" id="genre">
+                <option value="invalid">Select an Option</option>
+                <option value="hiphop">Hip-hop</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="rnb">R&B</option>
+            </select>
+
+            <label for="description">Description</label>
+            <input type="text" name="description" class="btn-block" id="description" placeholder="">
+
+            <label for="comments">Comments</label>
+            <input type="text" name="comments" class="btn-block" id="comments" placeholder="">
+
+            <label for="fav-song">Favorite Song(s)</label>
+            <input type="fav-song" name="fav-song" class="btn-block" id="comments" placeholder="">
+            <label for="photo">Upload Photo</label>
+            <input type="file" name="photo-upload" id="photo">
+            <div class="row">
+            <div class="submit-btn">
+            <button class="btn btn-primary submit-btn" type="submit"><i class="fas fa-cloud-upload"></i> Submit</button>
+            </div>
+            
+            <a href="/" class="btn btn-info" role="button"><i class="fas fa-home-alt"></i> Home</a>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
